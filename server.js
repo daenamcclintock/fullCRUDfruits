@@ -3,7 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan');
 const methodOverride = require('method-override');
-// we'll also import our fruits model when we have it
+const Fruit = require('./models/fruits')
 
 // <-------------- CREATE EXPRESS APP OBJECT -------------->
 const app = require('liquid-express-views')(express());
@@ -20,7 +20,8 @@ app.use(express.static('public'));
 
 // <-------------- ROUTES -------------->
 app.get('/', (req, res) => {
-    res.send('app is listening, off to the races!')
+    console.log('fruit model', Fruit);
+    res.send('app is listening, off to the races!');
 })
 
 
