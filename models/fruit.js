@@ -1,20 +1,26 @@
-// <-------------- IMPORT DEPENDENCIES -------------->
-const mongoose = require('./connection');
+/////////////////////////////////
+// import dependencies
+/////////////////////////////////
+const mongoose = require('./connection')
 
-// <-------------- DEFINE FRUITS MODEL -------------->
+/////////////////////////////////
+// define our fruits model
+/////////////////////////////////
 // pull the schema and model constructors from mongoose
 // we're going to use something called destructuring to accomplish this
-const { Schema, model } = mongoose;
+const { Schema, model } = mongoose
 
-// make our fruits Schema
+// make our fruits schema
 const fruitSchema = new Schema({
     name: { type: String },
     color: { type: String },
     readyToEat: { type: Boolean }
-}, { timestamps: true });
+}, { timestamps: true })
 
 // make our fruit model
-const Fruit = model("Fruit", fruitSchema);
+const Fruit = model("Fruit", fruitSchema)
 
-// <-------------- EXPORT MODEL -------------->
-module.exports = Fruit;
+/////////////////////////////////
+// Export our Model
+/////////////////////////////////
+module.exports = Fruit
