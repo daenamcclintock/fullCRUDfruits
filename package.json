@@ -1,7 +1,7 @@
 {
-  "name": "fullcrudfruits",
+  "name": "full-crud-fruits-mongoose",
   "version": "1.0.0",
-  "description": "First Mongoose Full Stack App",
+  "description": "Full CRUD build fruit app using express, mongoose, and liquid",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,24 +10,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/daenamcclintock/fullCRUDfruits.git"
+    "url": "git@git.generalassemb.ly:sei-ec-remote/full-CRUD-fruits-mongoose.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/daenamcclintock/fullCRUDfruits/issues"
-  },
-  "homepage": "https://github.com/daenamcclintock/fullCRUDfruits#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-mongo": "^4.6.0",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
+    "express-session": "^1.17.2",
     "liquid-express-views": "^1.0.8",
     "method-override": "^3.0.0",
     "mongoose": "^6.2.4",
     "morgan": "^1.10.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.15"
   }
 }

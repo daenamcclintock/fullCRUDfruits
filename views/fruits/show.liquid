@@ -13,13 +13,25 @@
                 {%endif%}
             </h2>
             <h3>{{ fruit.color }}</h3>
-            <div class="btn-group">
+            {% if fruit.owner == userId  %}
+                <div class="btn-group">
 
-                <a href="/fruits/{{ fruit.id }}/edit" class="btn btn-primary">Edit</a>
-                <form action="/fruits/{{ fruit._id }}?_method=DELETE" method="POST">
-                    <input type="submit" value="delete that froot" class="btn btn-danger">
-                </form>
-            </div>
+                    <a href="/fruits/{{ fruit.id }}/edit" class="btn btn-primary">Edit</a>
+                    <form action="/fruits/{{ fruit._id }}?_method=DELETE" method="POST">
+                        <input type="submit" value="delete that froot" class="btn btn-danger">
+                    </form>
+                </div>
+            {% endif %}
         </article>
+        <div class="col-md-6">
+            <form action="/comments/{{fruit.id}}" method="POST">
+                <fieldset>
+                    <legend>Add Comment</legend>
+                    <label class="form-label">Comment: </label>
+                    <input type="text" class="form-control" name="note" placeholder="enter comment here...">
+                </fieldset>
+                <input type="submit" class="btn btn-success" value="Add Comment">
+            </form>
+        </div>
     </div>
 {% endblock %}
